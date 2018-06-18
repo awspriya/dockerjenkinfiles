@@ -12,7 +12,7 @@ node {
      {
       docker.withRegistry('https://registry.hub.docker.com','dockertest1')
         {
-        app.push(1.1)
+        app.push("latest")
                 }
      }
      }
