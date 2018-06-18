@@ -1,14 +1,14 @@
 node {
  def app
-   stage('clone rep')
+   stage ('clone rep')
     {
      git "https://github.com/awspriya/dockerfiles.git"
      }
-   stage('build image')
+   stage ('build image')
     {
      app=docker.build("priyaawscloud/testubuntu")
       }
-    stage('push image')
+    stage ('push image')
      {
       docker.withRegistry(https://hub.docker.com,dockertest1)
         {
