@@ -10,7 +10,7 @@ node {
       }
     stage ('push image')
      {
-      docker.withRegistry('https://hub.docker.com','dockertest1')
+      docker.withRegistry('https://registry.hub.docker.com','dockertest1')
         {
         app.push("${env.BUILD_NUMBER}")
          }
